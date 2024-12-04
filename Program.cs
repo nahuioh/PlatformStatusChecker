@@ -18,7 +18,8 @@ builder.Services.AddAutoMapper(typeof(Program));
 // Agregar Swagger para documentación de API
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+// Agregar el logger
+builder.Services.AddLogging();
 // Crear la aplicación.
 var app = builder.Build();
 

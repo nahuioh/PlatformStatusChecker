@@ -48,3 +48,4 @@ C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\refint\Platfo
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.pdb
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.genruntimeconfig.cache
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\ref\PlatformStatusChecker.dll
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.sourcelink.json
