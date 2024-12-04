@@ -34,20 +34,14 @@ public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQue
         foreach (var platform in platforms)
         {
             // Llamada al servicio para obtener el estado de la plataforma
-            var status = await _platformStatusService.CheckPlatformStatus(platform.Url);
-
-            // Agregamos la versión de la plataforma, por ahora es estática (puedes actualizarla más tarde de forma dinámica)
-            var version = "1.0.2";  // Estático por ahora, puedes cambiarlo según la respuesta de la API
-
-            // Log para mostrar el estado de la plataforma junto con su versión
-            _logger.LogInformation("Plataforma: {PlatformName}, Estado: {Status}, Versión: {Version}", platform.Name, status, version);
-
+            var response = await _platformStatusService.CheckPlatformStatus(platform);
+            
             // Añadimos el DTO a la lista de resultados
             platformStatuses.Add(new PlatformStatusDto
             {
-                PlatformName = platform.Name,
-                Version = version,  // Usamos la versión que definimos
-                Status = status
+                PlatformName = response.PlatformName,
+                Version = response.Version,  // Usamos la versión que definimos
+                Status = response.Status
             });
         }
 
