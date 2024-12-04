@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cizWnto0CDxgEA+he3rhIAIDyTD1/+AC3Qsgy9tfuZk=",
+  "Source": "PlatformStatusChecker",
+  "BasePath": "_content/PlatformStatusChecker",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

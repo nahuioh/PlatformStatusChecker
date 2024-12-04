@@ -1,0 +1,6 @@
+@PlatformStatusChecker_HostAddress = http://localhost:5198
+
+GET {{PlatformStatusChecker_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
