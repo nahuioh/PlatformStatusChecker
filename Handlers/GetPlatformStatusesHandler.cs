@@ -44,7 +44,7 @@ public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQue
                 Status = response.Status
             });
         }
-
         return platformStatuses;
     }
+    
 }

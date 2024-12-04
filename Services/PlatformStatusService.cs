@@ -3,12 +3,14 @@ using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using Microsoft.Extensions.Logging;
 
 public class PlatformStatusService
 {
     private readonly HttpClient _httpClient;
     private readonly AppDbContext _context;
     private readonly ILogger<GetPlatformStatusesHandler> _logger;
+    private static int _callLog = 0;  // Lista en memoria para almacenar las URLs de las llamadas
 
     public PlatformStatusService(HttpClient httpClient, AppDbContext context, ILogger<GetPlatformStatusesHandler> logger)
     {
@@ -26,7 +28,7 @@ public class PlatformStatusService
             var status = jsonResponse["responseCode"]?.ToString();
             var version = jsonResponse["version"]?.ToString();
 
-            _logger.LogInformation(jsonResponse.ToString());
+           //_logger.LogInformation(jsonResponse.ToString());
 
             var platform = new PlatformStatus
             {
@@ -36,10 +38,7 @@ public class PlatformStatusService
                 Url = platformTemp.Url,
             };
 
-            // Guardamos el estado de la plataforma en la base de datos en memoria
-            _context.PlatformStatuses.Add(platform);
-            await _context.SaveChangesAsync();
-
+            IncrementCallLog();            
             return platform;
         }
         catch (Exception ex)
@@ -53,5 +52,15 @@ public class PlatformStatusService
             };
         }
     }
+    // Incrementar el contador de llamadas en memoria
+    private void IncrementCallLog()
+    {
+        _callLog++;  // Incrementa el contador si ya existe la plataforma
+    }
 
+    // Obtener el contador de llamadas para una plataforma
+    public int GetCallLogCount()
+    {
+        return _callLog;
+    }
 }
