@@ -1,3 +1,11 @@
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.csproj.AssemblyReference.cache
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.AssemblyInfoInputs.cache
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.AssemblyInfo.cs
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.csproj.CoreCompileInputs.cache
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.sourcelink.json
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\appsettings.json
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\PlatformStatusChecker.exe
@@ -27,14 +35,6 @@ C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\Swashbuckle.A
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.csproj.AssemblyReference.cache
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.AssemblyInfoInputs.cache
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.AssemblyInfo.cs
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.csproj.CoreCompileInputs.cache
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\PlatformStatusChecker.sourcelink.json
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\bistrosoft\Desktop\PlatformStatusChecker\obj\Debug\net8.0\staticwebassets\msbuild.PlatformStatusChecker.Microsoft.AspNetCore.StaticWebAssets.props

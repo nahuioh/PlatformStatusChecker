@@ -12,11 +12,12 @@ public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQue
 {
     private readonly PlatformStatusService _platformStatusService;
     private readonly ILogger<GetPlatformStatusesHandler> _logger; // Cambié el tipo de logger a GetPlatformStatusesHandler
-
-    public GetPlatformStatusesHandler(PlatformStatusService platformStatusService, ILogger<GetPlatformStatusesHandler> logger)
+    private readonly AppDbContext _context;
+    public GetPlatformStatusesHandler(PlatformStatusService platformStatusService, ILogger<GetPlatformStatusesHandler> logger, AppDbContext context)
     {
         _platformStatusService = platformStatusService;
         _logger = logger;
+        _context = context;
     }
 
     public async Task<List<PlatformStatusDto>> Handle(GetPlatformStatusesQuery request, CancellationToken cancellationToken)

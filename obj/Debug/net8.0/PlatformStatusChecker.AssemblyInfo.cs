@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PlatformStatusChecker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+974d9f2b1414e1f4bebcbd4be382d9923815a8b1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+234aaa3d545073d71a0b80c38a9a86be90782658")]
 [assembly: System.Reflection.AssemblyProductAttribute("PlatformStatusChecker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PlatformStatusChecker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

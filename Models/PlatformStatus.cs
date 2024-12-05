@@ -5,4 +5,5 @@ public class PlatformStatus
     public string Version { get; set; }
     public string Status { get; set; }
     public string Url { get; set; }
+    public int CallCount { get; set; } // Contador de llamadas
 }

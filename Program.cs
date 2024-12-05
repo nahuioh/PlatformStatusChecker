@@ -5,22 +5,13 @@ using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-
-// Agregar contexto de base de datos en memoria
-builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("PlatformStatuses"));
-
-// Registrar servicios necesarios
 builder.Services.AddScoped<PlatformStatusService>();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetPlatformStatusesHandler>());
 builder.Services.AddHttpClient();
 builder.Services.AddAutoMapper(typeof(Program));
-
-// Agregar Swagger para documentación de API
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-// Agregar el logger
 builder.Services.AddLogging();
-
 builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("PlatformStatuses"));
 
 // Crear la aplicación.
