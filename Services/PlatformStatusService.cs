@@ -1,9 +1,4 @@
-using System.Net.Http;
-using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
-using Newtonsoft.Json;
-using System.Collections.Generic;
-using Microsoft.Extensions.Logging;
 
 public class PlatformStatusService
 {

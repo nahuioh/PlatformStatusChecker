@@ -1,9 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
-public class AppDbContext : DbContext
+public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-    public DbSet<PlatformStatus> PlatformStatuses { get; set; }
-    public DbSet<ApiCallCounter> ApiCallCounters { get; set; } // Nuevo DbSet
-
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public required DbSet<PlatformStatus> PlatformStatuses { get; set; }
+    public required DbSet<ApiCallCounter> ApiCallCounters { get; set; } // Nuevo DbSet
 }

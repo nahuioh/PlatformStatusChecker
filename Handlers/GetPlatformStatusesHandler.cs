@@ -1,10 +1,4 @@
 using MediatR;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore; // Asegúrate de incluir este namespace
-
 public class GetPlatformStatusesQuery : IRequest<List<PlatformStatusDto>>
 {
 }
@@ -12,13 +6,9 @@ public class GetPlatformStatusesQuery : IRequest<List<PlatformStatusDto>>
 public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQuery, List<PlatformStatusDto>>
 {
     private readonly PlatformStatusService _platformStatusService;
-    private readonly ILogger<GetPlatformStatusesHandler> _logger; // Cambié el tipo de logger a GetPlatformStatusesHandler
-    private readonly AppDbContext _context;
-    public GetPlatformStatusesHandler(PlatformStatusService platformStatusService, ILogger<GetPlatformStatusesHandler> logger, AppDbContext context)
+    public GetPlatformStatusesHandler(PlatformStatusService platformStatusService)
     {
         _platformStatusService = platformStatusService;
-        _logger = logger;
-        _context = context;
     }
 
     public async Task<List<PlatformStatusDto>> Handle(GetPlatformStatusesQuery request, CancellationToken cancellationToken)
@@ -35,7 +25,6 @@ public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQue
 
         foreach (var platform in platforms)
         {
-            // Llamada al servicio para obtener el estado de la plataforma
             var response = await _platformStatusService.CheckPlatformStatus(platform);
             
             platformStatuses.Add(new PlatformStatusDto

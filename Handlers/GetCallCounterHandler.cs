@@ -1,11 +1,10 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
-using System.Threading;
-using System.Threading.Tasks;
+
 public class GetCallCounterQuery : IRequest<int>
 {
-    public string EndpointName { get; set; }
-    public string Action { get; set; }
+    public required string  EndpointName { get; set; }
+    public required string Action { get; set; }
 }
 public class GetCallCounterHandler : IRequestHandler<GetCallCounterQuery, int>
 {
@@ -42,7 +41,6 @@ public class GetCallCounterHandler : IRequestHandler<GetCallCounterQuery, int>
             await _context.SaveChangesAsync(cancellationToken);
         }
 
-        // Obtener el contador (si solo es "get")
         var result = await _context.ApiCallCounters
             .FirstOrDefaultAsync(c => c.EndpointName == request.EndpointName, cancellationToken);
 
