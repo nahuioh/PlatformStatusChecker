@@ -37,11 +37,10 @@ public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQue
             // Llamada al servicio para obtener el estado de la plataforma
             var response = await _platformStatusService.CheckPlatformStatus(platform);
             
-            // Añadimos el DTO a la lista de resultados
             platformStatuses.Add(new PlatformStatusDto
             {
                 PlatformName = response.PlatformName,
-                Version = response.Version,  // Usamos la versión que definimos
+                Version = response.Version,
                 Status = response.Status
             });
         }
