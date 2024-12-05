@@ -21,47 +21,24 @@ public class PlatformStatusController : ControllerBase
     [HttpGet("GetStatuses")]
     public async Task<IActionResult> GetPlatformStatuses()
     {
-        
-         // Incrementa el contador para este endpoint
-        await IncrementCallCounterAsync("GetStatuses");
+        // Incrementar el contador usando MediatR
+        await _mediator.Send(new GetCallCounterQuery { EndpointName = "GetStatuses", Action = "increment" });
 
+        // Obtener los estados de las plataformas
         var result = await _mediator.Send(new GetPlatformStatusesQuery());
         return Ok(new { statuses = result });
     }
-    // Endpoint para obtener el número de llamadas realizadas
-    [HttpGet("call-count")]
+
+    [HttpGet("GetCallCount")]
     public async Task<IActionResult> GetCallCount()
     {
-        var counter = await _context.ApiCallCounters
-            .FirstOrDefaultAsync(c => c.EndpointName == "GetStatuses");
+        // Obtener el contador usando MediatR
+        var count = await _mediator.Send(new GetCallCounterQuery { EndpointName = "GetStatuses", Action = "get" });
 
         return Ok(new
         {
             EndpointName = "GetStatuses",
-            CallCount = counter?.CallCount ?? 0
+            CallCount = count
         });
-        //return Ok(_platformStatusService.GetCallLogCount());  // Devolvemos la cantidad de llamadas
-    }
-    private async Task IncrementCallCounterAsync(string endpointName)
-    {
-        var counter = await _context.ApiCallCounters
-            .FirstOrDefaultAsync(c => c.EndpointName == endpointName);
-
-        if (counter == null)
-        {
-            counter = new ApiCallCounter
-            {
-                EndpointName = endpointName,
-                CallCount = 1
-            };
-            _context.ApiCallCounters.Add(counter);
-        }
-        else
-        {
-            counter.CallCount++;
-            _context.ApiCallCounters.Update(counter);
-        }
-
-        await _context.SaveChangesAsync();
     }
 }

@@ -2,7 +2,8 @@ using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using Microsoft.Extensions.Logging; // Asegúrate de incluir este namespace
+using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore; // Asegúrate de incluir este namespace
 
 public class GetPlatformStatusesQuery : IRequest<List<PlatformStatusDto>>
 {
@@ -46,5 +47,4 @@ public class GetPlatformStatusesHandler : IRequestHandler<GetPlatformStatusesQue
         }
         return platformStatuses;
     }
-    
 }
